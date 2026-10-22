@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors_in_immutables
+
 import 'package:flutter/material.dart';
 import '../data/eunoia_store.dart';
 import '../theme/app_theme.dart';
@@ -17,7 +19,7 @@ class RatingScreen extends StatelessWidget {
         _stat('اليوميات والمتابعات', '${data.entries.length} / ${data.assessments.length}', 'يوميات محفوظة / متابعات'),
       ]),
       SizedBox(height: 16),
-      AppCard(child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+      AppCard(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text('الأسبوع ده كان عامل إزاي؟', style: TextStyle(color: AppColors.gold, fontSize: 19, fontWeight: FontWeight.bold)),
         SizedBox(height: 12),
         SizedBox(height: 160, child: Row(crossAxisAlignment: CrossAxisAlignment.end, mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: List.generate(7, (i) {
@@ -28,7 +30,7 @@ class RatingScreen extends StatelessWidget {
         Text('مفيش تسجيل في يوم؟ مش هنعمل له تقدير.', style: TextStyle(color: AppColors.muted, fontSize: 12)),
       ])),
       SizedBox(height: 16),
-      AppCard(child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+      AppCard(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text('إنتِ بتقدمي إزاي؟', style: TextStyle(color: AppColors.gold, fontSize: 19, fontWeight: FontWeight.bold)),
         SizedBox(height: 8),
         Text('تمرين التنفس: ${data.breathSessions} · تسجيل الإحساس: ${data.moods.length} · أسئلة المتابعة: ${data.assessments.length}', textAlign: TextAlign.right, style: TextStyle(color: AppColors.muted, height: 1.8)),

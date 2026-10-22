@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors_in_immutables
+
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 import '../widgets/brand_mark.dart';

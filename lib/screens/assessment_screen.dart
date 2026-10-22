@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../data/eunoia_store.dart';
 import '../theme/app_theme.dart';
 
+// ignore: prefer_const_constructors_in_immutables
 class AssessmentScreen extends StatefulWidget { AssessmentScreen({super.key}); @override State<AssessmentScreen> createState() => _AssessmentScreenState(); }
 
 class _AssessmentScreenState extends State<AssessmentScreen> {

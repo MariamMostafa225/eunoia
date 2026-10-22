@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors_in_immutables
+
 import 'package:flutter/material.dart';
 import '../data/eunoia_store.dart';
 import '../theme/app_theme.dart';
@@ -39,7 +41,7 @@ class _JournalScreenState extends State<JournalScreen> {
         );
       });
 
-  Widget _editor() => AppCard(child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+  Widget _editor() => AppCard(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text('إيه اللي شاغل بالك؟', style: TextStyle(color: AppColors.gold, fontSize: 20, fontWeight: FontWeight.bold)),
         Text('إيه اللي حصل؟ وإيه أكتر حاجة محتاجة اهتمام منك؟', textAlign: TextAlign.right, style: TextStyle(color: AppColors.muted)),
         SizedBox(height: 10),
@@ -50,7 +52,7 @@ class _JournalScreenState extends State<JournalScreen> {
         Text('اليوميات محفوظة على نفس الجهاز. مفيش تحليل نفسي فعلي للكلام هنا.', textAlign: TextAlign.right, style: TextStyle(color: AppColors.muted, fontSize: 12)),
       ]));
 
-  Widget _entries() => AppCard(child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+  Widget _entries() => AppCard(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Text('ملاحظاتك الأخيرة · ${store.entries.length} يومية', style: TextStyle(color: AppColors.gold, fontSize: 19, fontWeight: FontWeight.bold)),
         if (store.entries.isEmpty) Text('لما تحفظي أول يومية، هتلاقيها هنا.', style: TextStyle(color: AppColors.muted))
         else ...store.entries.reversed.take(8).map((e) => ListTile(contentPadding: EdgeInsets.zero, title: Text(e['text'] ?? '', textAlign: TextAlign.right), subtitle: Text((e['feelings'] as List? ?? []).join(' · '), textAlign: TextAlign.right), trailing: Icon(Icons.edit_note, color: AppColors.coral))),

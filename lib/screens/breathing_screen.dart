@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors_in_immutables
+
 import 'dart:async';
 import 'package:flutter/material.dart';
 import '../data/eunoia_store.dart';

@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously, prefer_const_constructors_in_immutables
+
 import 'package:flutter/material.dart';
 import '../data/eunoia_store.dart';
 import '../theme/app_theme.dart';
@@ -110,7 +112,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     Icon(Icons.edit_note, size: 38, color: AppColors.gold),
                     Expanded(
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('إيه أكتر إحساس معاكي اليومين دول؟', textAlign: TextAlign.right, style: TextStyle(color: AppColors.gold, fontSize: 18, fontWeight: FontWeight.bold)),
                           Text('اكتبي براحتك. دي يومياتك، مش محادثة.', textAlign: TextAlign.right, style: TextStyle(color: AppColors.muted)),
@@ -128,7 +130,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   SizedBox(width: 14),
                   Icon(Icons.favorite_border, color: AppColors.gold, size: 27),
                   SizedBox(width: 14),
-                  Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+                  Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Text('خطة الأمان', style: TextStyle(color: AppColors.coral, fontWeight: FontWeight.bold)),
                     Text('جهزي خطوات تساعدك وقت اللزوم', textAlign: TextAlign.right, style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.bold, fontSize: 18)),
                     Text('اكتبي اللي يطمنك ومين تقدري تكلميه.', textAlign: TextAlign.right, style: TextStyle(color: AppColors.muted)),
@@ -163,7 +165,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget _heroCard() => AppCard(
         color: AppColors.gold,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('خطوة صغيرة مقترحة', style: TextStyle(color: AppColors.forestDark, fontSize: 12)),
             SizedBox(height: 6),
@@ -184,7 +186,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   Widget _moodCard() => AppCard(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('إحساسك دلوقتي عامل إيه؟', textAlign: TextAlign.right, style: TextStyle(color: AppColors.gold, fontSize: 20, fontWeight: FontWeight.bold)),
             Text('اختاري الأقرب ليكي، من غير حكم.', textAlign: TextAlign.right, style: TextStyle(color: AppColors.muted, fontSize: 12)),
@@ -213,7 +215,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       );
 
   Widget _quickCard(String title, String description, IconData icon, String action, int tab) => AppCard(
-        child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Container(padding: EdgeInsets.all(10), decoration: BoxDecoration(color: AppColors.surface2, borderRadius: BorderRadius.circular(15)), child: Icon(icon, color: AppColors.gold)),
           Spacer(),
           Text(title, textAlign: TextAlign.right, style: TextStyle(color: AppColors.gold, fontSize: 18, fontWeight: FontWeight.bold)),
